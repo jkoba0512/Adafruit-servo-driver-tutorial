@@ -31,6 +31,15 @@
 - **ライセンス**: [Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
 - **出典**: <https://commons.wikimedia.org/wiki/File:Tower_Pro_SG90_micro_servo_motor.jpg>
 
+### `muybridge_walk.gif`, `muybridge_pace.gif`, `muybridge_gallop.gif`
+- **タイトル**: Muybridge による馬の歩・側対歩・襲歩の連続写真アニメーション
+- **撮影者**: Eadweard Muybridge（1887年）／アニメーション化: Waugsberg（2006年）
+- **ライセンス**: **パブリックドメイン**（Muybridge は 1904 年没、撮影から 130年以上経過）
+- **出典**:
+  - <https://commons.wikimedia.org/wiki/File:Muybridge_horse_walking_animated.gif>
+  - <https://commons.wikimedia.org/wiki/File:Muybridge_horse_pacing_animated.gif>
+  - <https://commons.wikimedia.org/wiki/File:Muybridge_race_horse_animated.gif>
+
 ### `spotmini.jpg`
 - **タイトル**: SpotMini, Boston Dynamics, Robot
 - **著者**: Web Summit (Harry Murphy/Sportsfile)

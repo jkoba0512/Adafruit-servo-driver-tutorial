@@ -98,6 +98,24 @@ duty = 0.50。スイング中は対角の2本だけが接地するので、
 | FR + RL | 0.00 |
 | FL + RR | 0.50 |
 
+### 動画で見る（実際の馬のゲイト）
+
+ロボットの歩容は**馬や犬の歩き方**を参考にしているので、実際の動物の動きを見ると理解が早いです。
+下の3つは Eadweard Muybridge（1887）の連続写真アニメーション（パブリックドメイン）。
+
+| ゲイト | 馬の例（GIF） |
+|-------|-------------|
+| **クロール（walk）** | ![馬のwalk](../assets/images/external/muybridge_walk.gif) |
+| **ペース（pace）**  | ![馬のpace](../assets/images/external/muybridge_pace.gif) |
+| **バウンドに近い（gallop）** | ![馬のgallop](../assets/images/external/muybridge_gallop.gif) |
+
+> 出典: [Eadweard Muybridge "Animal Locomotion" (1887)](https://commons.wikimedia.org/wiki/Category:Horse_motion_studies_by_Eadweard_Muybridge), パブリックドメイン
+
+**トロット（trot）**は対角ペアが同期する 2-beat 歩行です。動画で見たい場合は次が分かりやすい:
+
+- Wikipedia 記事の動画セクション: [Horse gait — Trot (Wikipedia, EN)](https://en.wikipedia.org/wiki/Horse_gait#Trot)
+- YouTube 解説: [Gaits of Horses](https://www.youtube.com/watch?v=xCWMI09F5O8)（walk → trot → canter → gallop の比較）
+
 ## 足先軌跡（foot trajectory）
 
 各脚は、自分の `φ_leg` から **足先の (x, y, z) 座標** を計算します。
