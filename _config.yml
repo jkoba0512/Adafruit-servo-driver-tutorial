@@ -35,5 +35,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-  - README_dev.md
+  - DEVELOPMENT.md
   - .gitignore

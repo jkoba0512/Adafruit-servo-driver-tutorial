@@ -98,25 +98,6 @@ examples/
 このリポジトリ固有の使い方（プロジェクト構成・例の開き方）は
 **[付録 D: VS Code + PlatformIO で進める](tutorial/appendix-d-platformio.md)** を参照。
 
-## GitHub Pages として公開する手順
-
-このリポジトリは [Jekyll](https://jekyllrb.com/) + [just-the-docs](https://just-the-docs.com/) テーマで
-そのまま **GitHub Pages** に公開できます。
-
-1. GitHub にリポジトリを作成して push
-2. リポジトリの **Settings → Pages** を開く
-3. **Source** を `Deploy from a branch` に設定
-4. **Branch** を `main` の `/ (root)` に設定して保存
-5. 数分待つと `https://<ユーザー名>.github.io/<リポジトリ名>/` で公開される
-
-ローカルプレビューしたい場合は `Gemfile` を使って:
-
-```bash
-bundle install
-bundle exec jekyll serve
-# → http://localhost:4000 で確認
-```
-
 ## ライセンス
 
 本教材（文書および Arduino サンプルコード）は **MIT License** の下で提供されています。
