@@ -109,7 +109,10 @@ lib_deps =
 ```
 
 初回ビルド（`pio run` または ✓ アイコン）時に自動ダウンロードされます。
-セットアップ手順は [付録 D](appendix-d-platformio.md) を参照。
+
+> PlatformIO 自体のセットアップが未完の方は、
+> [VSCode + PlatformIO + Arduino セットアップ資料 (Notion)](https://tasty-eyeliner-3a3.notion.site/VSCode-PlatformIO-Arduino-333e1b8189ac800bb65cef402e3702c0)
+> を先にご覧ください。本チュートリアル固有のメモは [付録 D](appendix-d-platformio.md) にまとめています。
 
 ## 最初のスケッチ
 

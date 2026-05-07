@@ -43,7 +43,7 @@ Arduino Uno と Adafruit 16-Channel PWM/Servo Driver（PCA9685）を使って、
 | 付録 A | [電源設計](tutorial/appendix-a-power.md) | サーボ電源の選び方 |
 | 付録 B | [デバッグ術](tutorial/appendix-b-debug.md) | 動かないときの切り分け |
 | 付録 C | [トラブル集](tutorial/appendix-c-troubleshooting.md) | よくある症状と対処 |
-| 付録 D | [VS Code + PlatformIO 環境](tutorial/appendix-d-platformio.md) | Arduino IDE 以外で進めたい人向け |
+| 付録 D | [VS Code + PlatformIO で進める](tutorial/appendix-d-platformio.md) | Arduino IDE 以外で進めたい人向け（外部資料リンク） |
 
 ## サンプルコード
 
@@ -91,7 +91,11 @@ examples/
 - ライブラリ: 各 example フォルダの `platformio.ini` に依存記述済み
   → 初回ビルド時に自動ダウンロード
 
-詳しいセットアップ手順は **[付録 D: VS Code + PlatformIO 環境](tutorial/appendix-d-platformio.md)** を参照。
+セットアップ全般は別資料にまとまっています:
+📖 **[VSCode + PlatformIO + Arduino セットアップ資料 (Notion)](https://tasty-eyeliner-3a3.notion.site/VSCode-PlatformIO-Arduino-333e1b8189ac800bb65cef402e3702c0)**
+
+このリポジトリ固有の使い方（プロジェクト構成・例の開き方）は
+**[付録 D: VS Code + PlatformIO で進める](tutorial/appendix-d-platformio.md)** を参照。
 
 ## GitHub Pages として公開する手順
 
