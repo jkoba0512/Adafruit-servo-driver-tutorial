@@ -18,6 +18,9 @@ nav_order: 7
 3. **GND は Arduino・PCA9685・サーボ電源で必ず共通**にする
 4. **電源容量は「全サーボ同時動作の合計電流以上」**を確保する
 
+![サーボ電源（V+ 端子）の接続](../assets/images/external/adafruit_hookup_power.jpg)
+*出典: [Adafruit Industries](https://learn.adafruit.com/16-channel-pwm-servo-driver/hooking-it-up), CC BY-SA 3.0*
+
 ## サーボの電流ってどのくらい？
 
 代表的なサーボの目安です（実機・負荷で変動）。

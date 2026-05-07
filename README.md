@@ -105,6 +105,10 @@ examples/
 
 PBL 講義・自学習・改変・再配布のいずれの目的でも自由にご利用いただけます。
 
+> 教材中で引用している外部画像（Adafruit Learning System / Wikimedia Commons 由来）は、
+> 本リポジトリの MIT とは別のライセンス（CC BY-SA 3.0/4.0、CC BY 2.0 など）で提供されています。
+> 詳細とクレジットは [assets/images/external/CREDITS.md](assets/images/external/CREDITS.md) を参照してください。
+
 ## 免責事項
 
 本教材は教育目的で提供されています。記載内容は執筆時点での情報であり、

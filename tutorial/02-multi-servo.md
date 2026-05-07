@@ -18,6 +18,12 @@ nav_order: 2
 - Chapter 1 の構成 + サーボをあと 3 個（合計 4 個）
 - ch 0〜ch 3 にそれぞれ接続
 
+![PCA9685 に複数サーボを接続した例](../assets/images/external/adafruit_hookup_all_servos.jpg)
+*出典: [Adafruit Industries](https://learn.adafruit.com/16-channel-pwm-servo-driver/hooking-it-up), CC BY-SA 3.0*
+
+ケーブルがごちゃつくので、**各 ch のサーボにマスキングテープでラベル**をつけておくと
+後のキャリブレーションが格段に楽になります。
+
 ## まずは動かしてみる
 
 4 個のサーボを **「全部同じ角度」** に動かすのは簡単です。

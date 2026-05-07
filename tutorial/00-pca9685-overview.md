@@ -6,6 +6,9 @@ nav_order: 0
 
 # Chapter 0: PCA9685 とは
 
+![PCA9685 とサーボの接続例](../assets/images/external/adafruit_pca9685_board.jpg)
+*出典: [Adafruit Industries](https://learn.adafruit.com/16-channel-pwm-servo-driver/overview), CC BY-SA 3.0*
+
 ## 学習目標
 
 - PCA9685 が「何をしてくれるチップなのか」を説明できる
@@ -13,6 +16,12 @@ nav_order: 0
 - I²C・PWM・パルス幅・周波数 の用語を、サーボ制御の文脈で理解する
 
 ## サーボモータは「パルス幅」で動く
+
+下が代表的な RC サーボ（Tower Pro SG90, 9g）の実物。本体に小型 DC モータと減速ギア、
+角度制御回路が入っていて、3 本のケーブル（GND・電源・PWM 信号）で動かせます。
+
+![Tower Pro SG90 サーボ](../assets/images/external/sg90_servo.jpg)
+*Tower Pro SG90 / 出典: Suyash Dwivedi, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tower_Pro_SG90_micro_servo_motor.jpg), CC BY-SA 4.0*
 
 RC サーボ（ラジコンサーボ）は、おおよそ **20 ms 周期（= 50 Hz）** の矩形波の
 **HIGH の長さ（パルス幅）** で角度が決まります。
@@ -92,14 +101,8 @@ I²C（アイ・スクエア・シー）は、**SDA（データ線）と SCL（�
 - マスタ（Arduino）が「`0x40` さん、これこれの値書き込んで」と話しかける
 - 配線が 2 本で済むので、サーボドライバを **複数枚チェーン**できる
 
-```
-Arduino                   PCA9685 #1            PCA9685 #2
-  SDA ─┬───────────────────── SDA ───────────────── SDA
-  SCL ─┼┬──────────────────── SCL ───────────────── SCL
-  GND ─┼┼─── GND ──────────── GND ───────────────── GND
-       ││
-       └┴── プルアップ抵抗（基板に内蔵されています）
-```
+![Arduino と PCA9685 の I²C 接続](../assets/images/external/adafruit_hookup_i2c.jpg)
+*出典: [Adafruit Industries](https://learn.adafruit.com/16-channel-pwm-servo-driver/hooking-it-up), CC BY-SA 3.0*
 
 ## PCA9685 ボードの主な端子
 

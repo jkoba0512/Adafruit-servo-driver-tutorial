@@ -55,34 +55,15 @@ PCA9685 ch0 の3pin
   橙   赤   茶   ← サーボのケーブル（色は機種により異なる）
 ```
 
-### 全体配線図（ASCII）
+### 全体配線図
 
-```
-                    ┌──────────────────┐
-                    │     Arduino Uno   │
-                    │                  │
-                    │  5V ──┐          │
-                    │  GND ┐│          │
-                    │  A4 ┐││          │
-                    │  A5 ┤││          │
-                    └─────┴┴┴──────────┘
-                          ││││
-              ┌───────────┴┴┴┴───┐
-              │  VCC GND SDA SCL │
-              │       PCA9685    │
-              │                  │
-              │  V+ ──┐  GND ─┐  │
-              │       │       │  │
-              │  ch0 [PWM][V+][GND] ─── サーボ
-              └───────┬───────┬──┘
-                      │       │
-                  +5V │       │ GND
-                      │       │
-                  ┌───┴───────┴───┐
-                  │  別電源（サーボ用）│
-                  │  5V / 4×単3など │
-                  └────────────────┘
-```
+![Arduino + PCA9685 + サーボ + 外部電源の配線](../assets/images/external/adafruit_hookup_servo.jpg)
+*出典: [Adafruit Industries](https://learn.adafruit.com/16-channel-pwm-servo-driver/hooking-it-up), CC BY-SA 3.0*
+
+- 黒/赤: GND と 5V（Arduino → PCA9685 VCC）
+- 青/黄: SDA / SCL（A4 / A5 → PCA9685 SDA / SCL）
+- 右上の DC ジャック: **サーボ専用電源**（V+ 緑端子）
+- ボード下端: ch 0 にサーボの 3pin を挿す
 
 > ⚠ **GND は必ず Arduino・PCA9685・サーボ電源で共通**にしてください。
 > ここを忘れるとサーボがブルブル震えるだけで動きません。

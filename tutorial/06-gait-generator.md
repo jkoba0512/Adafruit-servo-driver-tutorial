@@ -17,6 +17,17 @@ nav_order: 6
 - パラメータ（`cycle_time`, `stride`, `step_height`）の意味を体感的に把握する
 - 自分のロボットの寸法・取り付けに合わせて調整できる
 
+## 完成形のイメージ
+
+完成すると、研究機関でも使われている本格的な多脚歩行ロボット（例: Boston Dynamics の SpotMini）と
+同じ「位相制御 + 逆運動学」の枠組みで動くようになります。
+
+![Boston Dynamics SpotMini](../assets/images/external/spotmini.jpg)
+*Boston Dynamics SpotMini / 出典: Web Summit, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:SpotMini,_Boston_Dynamics,_Robot.jpg), CC BY 2.0*
+
+もちろんサイズも精度も全く違いますが、**「全脚の足先座標を時間関数で生成 → IK → サーボ」** という
+本質的な制御の流れは、学生作の小型 4 脚ロボットでも同じです。
+
 ## 全体アーキテクチャ
 
 ```
