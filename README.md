@@ -2,6 +2,7 @@
 title: ホーム
 layout: home
 nav_order: 1
+permalink: /
 ---
 
 # Adafruit PCA9685 で4脚ロボットを歩かせるチュートリアル
