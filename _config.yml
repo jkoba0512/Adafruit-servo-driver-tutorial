@@ -37,3 +37,8 @@ exclude:
   - vendor
   - DEVELOPMENT.md
   - .gitignore
+  - figures
+  - "*.py"
+  - pyproject.toml
+  - uv.lock
+  - .venv

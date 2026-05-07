@@ -64,7 +64,7 @@ bool ik2d(float x, float y, float L1, float L2,
   float cg = (L1*L1 + L2*L2 - d*d) / (2.0f * L1 * L2);
   cg = constrain(cg, -1.0f, 1.0f);
   float gamma = acosf(cg);
-  *hip  = alpha - beta;
+  *hip  = alpha + beta;        // 膝前構成
   *knee = (float)M_PI - gamma;
   return true;
 }

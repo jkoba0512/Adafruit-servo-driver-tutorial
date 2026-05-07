@@ -64,5 +64,30 @@ gh api repos/<owner>/<repo>/pages/builds/latest --jq '{status, error}'
 - `tutorial/*.md` … 各章（`parent: チュートリアル`、`nav_order: N`）
 - `examples/0X_xxx/` … 章ごとの Arduino スケッチ + `platformio.ini`
   - 1 フォルダに 1 つの `.ino`（複数置くと両 IDE でビルドエラー）
+- `assets/images/` … 図版の PNG（自動生成、コミット対象）
+- `figures/` … 図を生成する Python スクリプト（uv 管理、Jekyll 除外）
 - `DEVELOPMENT.md` … このファイル（Jekyll 除外）
 - `Gemfile` … ローカルプレビュー用（Jekyll 除外）
+
+## 図の更新方法
+
+`figures/` で uv プロジェクト管理。matplotlib + numpy。
+
+```bash
+cd figures
+
+# 依存関係（既に追加済み）
+uv add matplotlib numpy
+
+# 図を再生成
+uv run 01_easing_curves.py        # → assets/images/ch3_easing.png
+uv run 02_leg_ik.py               # → assets/images/ch4_leg_ik.png
+uv run 03_foot_trajectory.py      # → assets/images/ch5_foot_trajectory.png
+uv run 04_gait_timing.py          # → assets/images/ch5_gait_timing.png
+
+# 全部一括
+for f in 0*.py; do uv run "$f"; done
+```
+
+スタイルは `figures/_style.py` で一元管理（背景色・配色・フォント）。
+just-the-docs ダークモードに合わせた配色になっている。

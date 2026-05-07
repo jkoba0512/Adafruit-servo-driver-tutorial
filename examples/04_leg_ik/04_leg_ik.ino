@@ -52,7 +52,7 @@ bool ik2d(float x, float y, float L1_, float L2_,
   cosGamma = constrain(cosGamma, -1.0f, 1.0f);
   float gamma   = acosf(cosGamma);
 
-  *hipAngle  = alpha - beta;
+  *hipAngle  = alpha + beta;   // 膝前構成
   *kneeAngle = (float)M_PI - gamma;
   return true;
 }
