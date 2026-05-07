@@ -1,4 +1,4 @@
-title: Adafruit PCA9685 で4脚ロボットを歩かせるチュートリアル
+title: PCA9685 4脚ロボット
 description: Arduino Uno と PCA9685 で多脚ロボットの RC サーボを同期制御するための学習教材
 lang: ja
 
@@ -14,12 +14,12 @@ relative_links:
   collections: true
 
 # just-the-docs settings
-color_scheme: light
+color_scheme: dark
 search_enabled: true
 heading_anchors: true
 aux_links:
   "GitHub":
-    - "//github.com/"
+    - "https://github.com/jkoba0512/Adafruit-servo-driver-tutorial"
 
 # Mermaid 図を有効化
 mermaid:
