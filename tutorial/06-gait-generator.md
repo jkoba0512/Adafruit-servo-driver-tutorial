@@ -30,21 +30,18 @@ nav_order: 6
 
 ## 全体アーキテクチャ
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  loop()                                                 │
-│                                                         │
-│   1. dt = millis() - last_t                            │
-│   2. phase_global += dt / cycle_time                   │
-│   3. for each leg in [FR, FL, RR, RL]:                  │
-│         phase_leg = (phase_global + offset[leg]) mod 1  │
-│         (xf, ys, zd) = footTrajectory(phase_leg)        │
-│         (yaw, hip, knee) = IK(xf, ys, zd)               │
-│         setPWM(ch_yaw,  angleToPWM(yaw))                │
-│         setPWM(ch_hip,  angleToPWM(hip))                │
-│         setPWM(ch_knee, angleToPWM(knee))               │
-│   4. last_t = millis()                                  │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    Start([loop イテレーション開始]) --> Calc[dt = millis - last_t]
+    Calc --> Update[phase_global += dt / cycle_time]
+    Update --> ForEach{各脚 FR/FL/RR/RL}
+    ForEach --> Phase[phase_leg = phase_global + offset]
+    Phase --> Foot[footTrajectory<br/>→ x, y, z]
+    Foot --> IK[IK<br/>→ yaw, hip, knee]
+    IK --> PWM[setPWM × 3 サーボ]
+    PWM --> ForEach
+    ForEach -->|全脚処理済| Done[last_t = millis]
+    Done --> Start
 ```
 
 > 💡 ここでは Chapter 3 の `startMove()` 型の補間は **使いません**。
