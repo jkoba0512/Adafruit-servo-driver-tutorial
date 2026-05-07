@@ -180,4 +180,4 @@ nav_order: 9
 
 ---
 
-[◀ 付録 B へ](appendix-b-debug.md) | [🏠 README に戻る](../README.md)
+[◀ 付録 B へ](appendix-b-debug.md) | [▶ 付録 D へ](appendix-d-platformio.md)

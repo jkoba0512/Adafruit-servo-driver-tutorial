@@ -43,20 +43,25 @@ Arduino Uno と Adafruit 16-Channel PWM/Servo Driver（PCA9685）を使って、
 | 付録 A | [電源設計](tutorial/appendix-a-power.md) | サーボ電源の選び方 |
 | 付録 B | [デバッグ術](tutorial/appendix-b-debug.md) | 動かないときの切り分け |
 | 付録 C | [トラブル集](tutorial/appendix-c-troubleshooting.md) | よくある症状と対処 |
+| 付録 D | [VS Code + PlatformIO 環境](tutorial/appendix-d-platformio.md) | Arduino IDE 以外で進めたい人向け |
 
 ## サンプルコード
 
 `examples/` 以下に章ごとの `.ino` スケッチを置いています。
-そのまま Arduino IDE で開いてビルド・書き込みできます。
+**Arduino IDE / PlatformIO の両方に対応** しています（各フォルダに `platformio.ini` 同梱）。
 
 ```
 examples/
-├── 01_single_servo/   ... Ch 1 用
+├── 01_single_servo/   ... Ch 1 用（基本動作）
+├── 01b_calibration/   ... Ch 1 用（キャリブレーション）
 ├── 02_multi_servo/    ... Ch 2 用
 ├── 03_sync_motion/    ... Ch 3 用
 ├── 04_leg_ik/         ... Ch 4 用
 └── 05_walk_trot/      ... Ch 5・6 用（最終版）
 ```
+
+- **Arduino IDE**: `examples/0X_xxx/0X_xxx.ino` をダブルクリックで開く
+- **PlatformIO**: VS Code で `examples/0X_xxx/` フォルダを開く（プロジェクトとして認識される）
 
 ## 必要なハードウェア
 
@@ -71,9 +76,22 @@ examples/
 
 ## 必要なソフトウェア
 
+開発環境は次のどちらかを選んでください（**両方に対応**しています）。
+
+### A. Arduino IDE（はじめての人向け）
+
 - Arduino IDE（1.8 系または 2.x 系）
 - ライブラリ: **Adafruit PWM Servo Driver Library**
   - Arduino IDE のライブラリマネージャで `adafruit pwm` を検索してインストール
+
+### B. Visual Studio Code + PlatformIO（補完・Git 派向け）
+
+- Visual Studio Code
+- 拡張機能: **PlatformIO IDE**
+- ライブラリ: 各 example フォルダの `platformio.ini` に依存記述済み
+  → 初回ビルド時に自動ダウンロード
+
+詳しいセットアップ手順は **[付録 D: VS Code + PlatformIO 環境](tutorial/appendix-d-platformio.md)** を参照。
 
 ## GitHub Pages として公開する手順
 

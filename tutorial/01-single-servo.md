@@ -89,15 +89,33 @@ PCA9685 ch0 の3pin
 
 ## ライブラリのインストール
 
+開発環境ごとに方法が違います。どちらか片方でOK。
+
+### Arduino IDE の場合
+
 1. Arduino IDE を起動
 2. メニュー：**Tools → Manage Libraries...**（または **Sketch → Include Library → Manage Libraries...**）
 3. 検索欄に `adafruit pwm` と入力
 4. **Adafruit PWM Servo Driver Library** を選んで [Install]
 5. 依存ライブラリのインストールを求められたら **Install all** を選択
 
+### VS Code + PlatformIO の場合
+
+各 example フォルダの `platformio.ini` に依存記述済みなので、**何もする必要はありません**。
+
+```ini
+lib_deps =
+    adafruit/Adafruit PWM Servo Driver Library
+```
+
+初回ビルド（`pio run` または ✓ アイコン）時に自動ダウンロードされます。
+セットアップ手順は [付録 D](appendix-d-platformio.md) を参照。
+
 ## 最初のスケッチ
 
-`examples/01_single_servo/01_single_servo.ino` として保存してあります。
+`examples/01_single_servo/01_single_servo.ino` として保存してあります
+（PlatformIO 派は同フォルダの `platformio.ini` ごと VS Code で開いてください）。
+
 内容を順を追って見ていきましょう。
 
 ```cpp
@@ -193,7 +211,7 @@ void loop() {
 ```
 
 シリアルモニタから `150` `200` `300` …と打って、安全な範囲を探します。
-完成版は `examples/01_single_servo/01b_calibration.ino` に置いてあります。
+完成版は `examples/01b_calibration/01b_calibration.ino` に置いてあります。
 
 ## やってみよう（演習）
 

@@ -24,3 +24,4 @@ has_children: true
 | 付録 A | [電源設計](appendix-a-power.md) | 電源の選び方・容量計算 |
 | 付録 B | [デバッグ術](appendix-b-debug.md) | 動かないときの切り分け |
 | 付録 C | [トラブル集](appendix-c-troubleshooting.md) | よくある症状と対処 |
+| 付録 D | [VS Code + PlatformIO 環境](appendix-d-platformio.md) | Arduino IDE 以外で進めたい人向け |
